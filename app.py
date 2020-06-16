@@ -16,7 +16,7 @@ app=Flask(__name__)
 @app.route('/')
 def home():
 	return render_template('index.html')
-@app.route('/result',methods=['POST'])
+@app.route('/',methods=['POST'])
 def result():
 	car=request.form['model']
 	mileage=float(request.form['mileage'])
