@@ -29,7 +29,7 @@ def result():
 		pred=md.predict([[mileage,age,0,0]])
 	result=[car,mileage,age,round(float(pred))]
 	cols=['Car Model','Mileage','Age','Predicted Price($)']
-	return render_template('result.html',result=[cols,result])
+	return render_template('index.html',prediction_text='Predicted Price($):{}'.format(round(pred[0])))
 
 if __name__=='__main__':
 	app.run(debug=True)
